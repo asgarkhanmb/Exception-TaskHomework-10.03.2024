@@ -59,7 +59,7 @@ namespace Exceptions_Practice.Services
         {
             try
             {
-                var result = users.FirstOrDefault(m => m.Email == email || m.Password == password);
+                var result = users.FirstOrDefault(m => m.Email == email && m.Password == password);
                 if (result != null)
                 {
                     return "User found";
